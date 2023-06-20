@@ -1,9 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import shareVideo from 'src/assets/share.mp4';
 import logo from 'src/assets/logowhite.png';
-import GoogleLoginBtn from '../google/GoogleLoginBtn';
+import GoogleLoginBtn from './google/GoogleLoginBtn';
 
 function Login() {
   return (

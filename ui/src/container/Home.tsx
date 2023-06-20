@@ -3,13 +3,12 @@ import { HiMenu } from 'react-icons/hi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { Link, Route, Routes } from 'react-router-dom';
 
-import Sidebar from '../sidebar/Sidebar';
-import UserProfile from '../Profile';
-import Pins from '../pins';
+import Pins from './Pins';
+import { Sidebar, UserProfile } from 'src/components';
 import Logo from 'src/assets/logo.png';
 import { userQuery } from 'src/utils/sanity/data';
-import { User } from 'src/utils/interfaces/User';
 import { client } from 'src/utils/sanity/client';
+import { User } from 'src/utils/sanity/interfaces/User';
 
 function Home() {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
@@ -24,7 +23,6 @@ function Home() {
   useEffect(() => {
     const query = userQuery(userInfo?.sub);
     client.fetch(query).then((data) => {
-      console.log(data);
       setUser(data[0]);
     });
   }, []);

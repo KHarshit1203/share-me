@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { RiHomeFill } from 'react-icons/ri';
-import { IoIosArrowForward } from 'react-icons/io';
+// import { IoIosArrowForward } from 'react-icons/io';
 
 import Logo from 'src/assets/logo.png';
-import { User } from 'src/utils/interfaces/User';
-import { Category } from 'src/utils/interfaces/Category';
+import { User } from 'src/utils/sanity/interfaces/User';
+import { Category } from 'src/utils/sanity/interfaces/Category';
 
 interface Props {
   user: User;
